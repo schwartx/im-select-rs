@@ -6,6 +6,9 @@ edition = "2024"
 [profile.release]
 lto = true
 debug = false
+strip = true
+panic = "abort"
+opt-level = "z"
 
 
 [dependencies]
