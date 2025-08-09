@@ -1,8 +1,8 @@
 use std::env;
 use winapi::shared::minwindef::{BOOL, HKL, LPARAM};
 use winapi::shared::windef::HWND;
+use winapi::um::winuser::WM_INPUTLANGCHANGEREQUEST;
 use winapi::um::winuser::{GetForegroundWindow, GetKeyboardLayout, PostMessageW};
-use winapi::um::winuser::{GetKeyboardLayoutList, WM_INPUTLANGCHANGEREQUEST};
 
 fn get_input_method() -> Option<u16> {
     unsafe {
@@ -40,6 +40,8 @@ fn switch_input_method(locale: u16) -> bool {
 }
 
 fn print_loaded_hkls() {
+    // 局部引入
+    use winapi::um::winuser::GetKeyboardLayoutList;
     unsafe {
         let count = GetKeyboardLayoutList(0, std::ptr::null_mut());
 
