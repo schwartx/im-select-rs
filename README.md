@@ -9,7 +9,7 @@
 
 ## 安装
 
-1. 下载最新的 [release](#) 或通过源码构建。
+1. 下载最新的 [release](https://github.com/schwartx/im-select-rs/releases/) 或通过源码构建。
 2. 将 `im-select.exe` 放置在系统路径中，或直接放置于需要执行的目录。
 
 ## 使用说明
